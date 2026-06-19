@@ -57,7 +57,20 @@
                 </div>
             </div>
         </header>
+        <main class="main container">
+            <div class="view-toggle">
+                <button id="listBtn" class="view-toggle__btn view-toggle__btn--list">
+                    <img class="view-toggle__icon" src="./assets/icons/flex.png" alt="list view">
+                </button>
+                <button id="gridBtn" class="view-toggle__btn view-toggle__btn--grid">
+                    <img class="view-toggle__icon" src="./assets/icons/grid.png" alt="grid view">
+                </button>
+            </div>
+            <div class="posts-list container" id="posts-container"></div>
+            <button class="posts__load-more">Load more</button>
+        </main>
     </div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script src="/js/main.js"></script>
 </html>
