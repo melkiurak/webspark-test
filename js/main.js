@@ -12,7 +12,18 @@ const posts = [
 const container = document.getElementById('posts-container');
 const listBtn = document.getElementById('listBtn');
 const gridBtn = document.getElementById('gridBtn');
+const fromInput = document.getElementById("date-from");
+const toInput = document.getElementById("date-to");
 
+const fromPicker = flatpickr(fromInput, {
+    dateFormat: "d-m-Y",
+    allowInput: true
+});
+
+const toPicker = flatpickr(toInput, {
+    dateFormat: "d-m-Y",
+    allowInput: true
+});
 
 container.innerHTML = posts.map(post => `
     <article class="post-item">
@@ -57,25 +68,29 @@ container.innerHTML = posts.map(post => `
 `).join('');
 
 
+
 listBtn.addEventListener('click', () => {
     listBtn.classList.add('active');
     gridBtn.classList.remove('active');
-
     container.classList.remove('grid');
 });
 
 gridBtn.addEventListener('click', () => {
     gridBtn.classList.add('active');
     listBtn.classList.remove('active');
-
     container.classList.add('grid');
 });
 
-
-document.getElementById('gridBtn').addEventListener('click', () => {
-    container.classList.add('grid');
+document.querySelectorAll(".date-filter__calendar").forEach((btn, index) => {
+    btn.addEventListener("click", () => {
+        if (index === 0) fromPicker.open();
+        if (index === 1) toPicker.open();
+    });
+});
+document.querySelectorAll(".date-filter__clear").forEach((btn, index) => {
+    btn.addEventListener("click", () => {
+        if (index === 0) fromPicker.clear();
+        if (index === 1) toPicker.clear();
+    });
 });
 
-document.getElementById('listBtn').addEventListener('click', () => {
-    container.classList.remove('grid');
-});
