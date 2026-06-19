@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="wrapper">
+        <header class="profile-header">
+            <div class="container">
+                <div class="profile-header__logo">
+                    <img src="/assets/images/logo.png" alt="monblanproject logo">
+                </div>
+                <div class="profile-header__content">
+                    <div class="profile-header__top">
+                        <h1 class="profile-header__title">monblanproject</h1>
+                        <button class="profile-header__button">
+                            Start on 17-02-2016
+                        </button>
+                    </div>
+                    <ul class="profile-header__stats">
+                        <li class="profile-header__stat"><strong>870</strong> posts</li>
+                        <li class="profile-header__stat"><strong>11,787</strong> followers</li>
+                        <li class="profile-header__stat"><strong>112</strong> following</li>
+                    </ul>
+                    <div class="date-filter">
+                        <label class="date-filter__label">Date</label>
+                        <div class="date-filter__group">
+                            <input class="date-filter__input" type="text" id="date-from" placeholder="from">
+                            <div class="date-filter__actions">
+                                <button class="date-filter__btn date-filter__clear">
+                                    <img src="/assets/icons/cross.png" alt="">
+                                </button>
+                                <button class="date-filter__btn date-filter__calendar">
+                                    <img src="/assets/icons/calendar.png" alt="">
+                                </button>
+                            </div>
+                        </div>
+                        <div class="date-filter__group">
+                            <input class="date-filter__input" type="text" id="date-to" placeholder="to">
+                            <div class="date-filter__actions">
+                                <button class="date-filter__btn date-filter__clear">
+                                    <img src="/assets/icons/cross.png" alt="">
+                                </button>
+                                <button class="date-filter__btn date-filter__calendar">
+                                    <img src="/assets/icons/calendar.png" alt="">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+</html>
